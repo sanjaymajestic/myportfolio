@@ -346,7 +346,7 @@ footer .link-group a:hover{
     border: none;
     margin-right: 1rem;
     font-size: 1.2rem;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 14px 15px 10px 15px;
 }
 .social-links .dribble{
@@ -361,7 +361,7 @@ footer .link-group a:hover{
     background-color: #f33a7e;
 }
 .social-links .whatsapp{
-    color: #25D366;
+    /* color: #25D366; */
 }
 .social-links .whatsapp:hover{
     background-color: #25D366;
@@ -540,12 +540,11 @@ footer .link-group a:hover{
 
 /* Twitter (X) Button */
 .x-account {
-    background-color: black;
-    color: white;
-    border-radius: 50%;
-}
-.x-account:hover {
-    background-color: #444;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(222, 219, 221);
+  color: black;
+  border-radius: 50%;
 }
 @keyframes textColorChange {
     0% { color: #0000FF; }   /* Blue */
