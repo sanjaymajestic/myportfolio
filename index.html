@@ -34,12 +34,44 @@
     <!-- for adding animation to website we have use AOS library 
     AOS Library css file cdn link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
 
     <!-- jquery cdn link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
     <!-- navbar starts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.to(".fade-in", {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                stagger: 0.3,
+                ease: "power2.out",
+            });
+        });
+    </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <nav
       id="navbar-top"
       class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
@@ -74,14 +106,11 @@
               <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#testimonial">Testimonials</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#blog">Blog</a>
             </li>
           </ul>
         </div>
-        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
+      
       </div>
     </nav>
     <!-- navbar ends here -->
@@ -90,22 +119,26 @@
     <section class="home pt-5 pb-5" id="home">
       <div class="row justify-content-evenly align-middle">
         <!-- here data-aos is used for adding aos animation  -->
+        
         <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
-          <h2 style="color: #3f396d">
+          <h2 class="neon-text">
             Hello! I Am <br /><span class="c-orange">Sanjay</span>
           </h2>
-          <p class="text-muted">
-            I'm A Web Developer having 5 years of experience in expertise of
-            creating website with fully responsive Also with backend part too.
+          <p class="text-muted animated-text">
+            I have a strong expertise in frontend development, as well as UI and UX design. Currently, I am expanding my skill set by studying DevOps to enhance my proficiency in software development and deployment processes.
           </p>
+          
+          
           <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
             Hire Me
           </button>
           <a href="" class="link ms-4 d-none">See My Work</a>
         </div>
+        
         <div class="col-10 col-md-4 d-none d-md-block">
-          <img src="images/banner-01.webp" class="img-fluid" alt="" />
+          <img src="images/san.img.jpg" class="img-fluid neon-glow" alt="San Image" style="width: 80%; max-width: 300px; height: auto;"/>
         </div>
+        
       </div>
     </section>
     <!-- home section ends here -->
@@ -113,12 +146,20 @@
     <!-- expertise section starts -->
     <section class="expertise mt-5" id="service">
       <div class="heading text-center">
-        <small>My Expertise</small>
-        <h3>
-          Provide Wide Range of <br />
-          Digital Services
+        <small class="text-primary font-semibold tracking-wide uppercase fade-in">
+            My Expertise
+        </small>
+        <h3 class="text-3xl font-bold leading-tight mt-2 fade-in">
+            Providing a Wide Range of <br />
+            <span class="text-gradient">Digital Services</span>
         </h3>
-      </div>
+        <p class="mt-3 text-gray-600 max-w-lg mx-auto fade-in">
+            Specializing in frontend development, UI/UX design, and DevOps integration to build seamless and scalable digital experiences.
+        </p>
+    </div>
+    
+    
+    
       <div class="row justify-content-evenly mt-5">
         <div class="col-10 col-md-4" data-aos="fade-up">
           <div class="service-card">
@@ -132,10 +173,9 @@
             <div class="content mt-3">
               <h4>Web Design</h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
+                I am a web designer dedicated to creating visually engaging and user-friendly websites. My focus is on delivering intuitive, responsive, and aesthetically refined digital experiences.
               </p>
-              <a href="" class="link">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -149,12 +189,16 @@
               />
             </div>
             <div class="content mt-3">
-              <h4>Web Development</h4>
+              <h4>Frontend Development</h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
+
+--- I am a frontend web developer dedicated to building responsive and user-friendly websites. My focus is on creating seamless digital experiences with clean, efficient, and modern code.
+
+
+ 
+
               </p>
-              <a href="" class="link">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -168,12 +212,10 @@
               />
             </div>
             <div class="content mt-3">
-              <h4>Debugging</h4>
+              <h4>AI Prompt Engineer</h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
+                I specialize in crafting precise and optimized prompts for AI models like ChatGPT, MidJourney, and Stable Diffusion to enhance accuracy and creativity in AI-generated outputs..
               </p>
-              <a href="" class="link">Read More</a>
             </div>
           </div>
         </div>
@@ -192,7 +234,7 @@
                   <span class="progress-value html-progress">0%</span>
                 </div>
                 <br />
-                <span class="text">HTML & CSS</span>
+                <span class="text">HTML,CSS&JS</span>
               </div>
             </div>
             <div class="col-10 col-md-6 mt-4 mt-md-0">
@@ -201,7 +243,7 @@
                   <span class="progress-value javascript-progress">0%</span>
                 </div>
                 <br />
-                <span class="text">JavaScript</span>
+                <span class="text">PYTHON</span>
               </div>
             </div>
           </div>
@@ -212,7 +254,7 @@
                   <span class="progress-value php-progress">0%</span>
                 </div>
                 <br />
-                <span class="text">PHP</span>
+                <span class="text">JAVA</span>
               </div>
             </div>
             <div class="col-10 col-md-6 mt-4 mt-md-0">
@@ -221,32 +263,56 @@
                   <span class="progress-value reactjs-progress">0%</span>
                 </div>
                 <br>
-                <span class="text">ReactJS</span>
+                <span class="text">LINUX</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
           <div class="heading mt-5 mt-md-3">
-            <small>My Skills</small>
-            <h3>Beautiful & Unique Digital Experiences</h3>
+            <style>
+              @keyframes colorTransition {
+                0% {
+                  color: #00FFFF; /* Cyan */
+                }
+                100% {
+                  color: #000080; /* Navy Blue */
+                }
+              }
+            
+              .text-animation {
+                text-align: center;
+                display: block;
+                font-size: 24px; /* Slightly larger for a royal feel */
+                font-weight: bold;
+                font-family: "Playfair Display", serif; /* Elegant royal font */
+                letter-spacing: 1px; /* Spaced out for a refined look */
+                animation: colorTransition 2s ease-in-out forwards;
+              }
+            </style>
+            
+            <!-- Google Font Import -->
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+            
+            <small class="text-animation">My Skills</small>
+            
+            
+            
+            
+            
+      
+            
+
+            <h3>Exquisite & Engaging Digital Experiences</h3>
             <p class="text-muted">
-              Nostrum exercitationem ullam corporis suscipit laborioa nisi ut
-              aliquid exrea commodi consequatur magni dolores aos qui ratione
-              voluptatem nesciunt.
+              I am a web designer passionate about creating visually engaging and user-friendly websites. My expertise lies in developing intuitive, responsive, and aesthetically refined digital experiences.
             </p>
             <p class="text-muted">
-              Quia voluptas sit aspernatur aut odit aut fugit, sed ruiano
-              consequntar magni dolores.
+              With a strong focus on UI/UX design, I craft designs that enhance both user engagement and accessibility. Whether it's a modern website, an interactive landing page, or a complete brand identity, I bring creativity and precision to every project.
             </p>
             <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
               <!-- here download attribute is used for adding download functionality to button  -->
-              <a
-                href="Entry Level Web Developer Resume.pdf"
-                download="SampleCV"
-                style="text-decoration: none;color: #fff;"
-                >Download CV</a
-              >
+             
             </button>
           </div>
         </div>
@@ -280,7 +346,7 @@
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">Game</span
                 ><br />
-                <a href="#" class="link">Read More</a>
+               
               </div>
             </div>
           </div>
@@ -297,7 +363,7 @@
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">Website</span
                 ><br />
-                <a href="#" class="read-more-btn link">Read More</a>
+               
               </div>
             </div>
           </div>
@@ -310,7 +376,7 @@
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">WebApp</span
                 ><br />
-                <a href="#" class="read-more-btn link">Read More</a>
+               
               </div>
             </div>
           </div>
@@ -325,7 +391,7 @@
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">App</span
                 ><br />
-                <a href="#" class="read-more-btn link">Read More</a>
+              
               </div>
             </div>
           </div>
@@ -338,7 +404,7 @@
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">Game</span
                 ><br />
-                <a href="#" class="read-more-btn link">Read More</a>
+                
               </div>
             </div>
           </div>
@@ -355,16 +421,13 @@
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">Web App</span
                 ><br />
-                <a href="#" class="read-more-btn link">Read More</a>
+               
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- portfolio section ends here -->
-
-    <!-- testimonial section starts  -->
     <section class="testimonial mt-5 pt-5" id="testimonial">
       <div class="row justify-content-evenly">
         <div class="col-md-4 col-10" data-aos="slide-right">
@@ -372,15 +435,29 @@
         </div>
         <div class="col-md-6 col-10 mt-5" data-aos="slide-left">
           <div class="heading">
-            <small>Testimonials</small>
-            <h3>Happy Clients Feedback</h3>
+            <style>
+              @keyframes colorChange {
+                0% { color: #FF5733; }  /* Red-Orange */
+                20% { color: #3498DB; } /* Blue */
+                40% { color: #2ECC71; } /* Green */
+                60% { color: #F1C40F; } /* Yellow */
+                80% { color: #9B59B6; } /* Purple */
+                100% { color: #FF5733; } /* Back to Red-Orange */
+              }
+            
+              .color-animation {
+                text-align: center;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                animation: colorChange 5s infinite;
+              }
+            </style>
+            <small class="color-animation">EDUCATIONS</small>
             <!-- here we will use carousel element from bootstrap -->
-            <div
-              id="carouselExampleControls"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
+                <!-- First Carousel Item -->
                 <div class="carousel-item active">
                   <div class="row justify-content-evenly">
                     <div class="col-2 text-center">
@@ -388,15 +465,16 @@
                     </div>
                     <div class="col-10">
                       <p class="text-muted">
-                        Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                        consecteaur aeci velit, sed quia non numquam eius modi
-                        tempora incidunt ut lao magnam aliquam quaerat ...
+                        I completed my 10th and 12th with good marks. I studied Arts group including Economics, Commerce, Computer Applications, and Accountancy. My school provided quality education.
                       </p>
-                      <h4>Kevin Andrew</h4>
-                      <small class="fs-6 text-muted">CEO of Company</small>
+                      <h4>St. John's Matriculation Higher Secondary School</h4>
+                      <small class="fs-6 text-muted">Principal of School</small><br>
+                      <small class="fs-6 text-muted">Arvind Sir</small>
                     </div>
                   </div>
                 </div>
+                
+                <!-- Second Carousel Item -->
                 <div class="carousel-item">
                   <div class="row justify-content-evenly">
                     <div class="col-2 text-center">
@@ -404,55 +482,32 @@
                     </div>
                     <div class="col-10">
                       <p class="text-muted">
-                        Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                        consecteaur aeci velit, sed quia non numquam eius modi
-                        tempora incidunt ut lao magnam aliquam quaerat ...
+                        I am pursuing a BCA and currently in my 4th semester. I have learned C, C++, Java, and Linux as part of my coursework. My college offers a well-structured curriculum. It provides a strong foundation in programming.
                       </p>
-                      <h4>Kevin Andrew</h4>
-                      <small class="fs-6 text-muted">CEO of Company</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row justify-content-evenly">
-                    <div class="col-2 text-center">
-                      <i class="bi bi-quote"></i>
-                    </div>
-                    <div class="col-10">
-                      <p class="text-muted">
-                        Quisruam est, qui dolorem ipsum quia dolor sit amet,
-                        consecteaur aeci velit, sed quia non numquam eius modi
-                        tempora incidunt ut lao magnam aliquam quaerat ...
-                      </p>
-                      <h4>Kevin Andrew</h4>
-                      <small class="fs-6 text-muted">CEO of Company</small>
+                      <h4>KG College of Arts and Sciences</h4>
+                      <small class="fs-6 text-muted">Principal of College</small><br>
+                      <small class="fs-6 text-muted">Dr. J. Rathinamala</small>
                     </div>
                   </div>
                 </div>
               </div>
-              <button
-                class="nextprev-btn rounded-pill prev-btn"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev"
-              >
+              
+              <!-- Carousel Controls -->
+              <button class="nextprev-btn rounded-pill prev-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <i class="bi bi-arrow-left-circle-fill prev"></i>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button
-                class="nextprev-btn rounded-pill next-btn"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-              >
+              <button class="nextprev-btn rounded-pill next-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                 <i class="bi bi-arrow-right-circle-fill next"></i>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-          </div>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!-- testimonial ends here -->
 
     <!-- blog section starts -->
@@ -471,15 +526,14 @@
             />
             <div class="card-body px-4">
               <small>By Sanjay</small
-              ><span class="ms-3">Mar 8,2022</span>
+              ><span class="ms-3">Dec_2024</span>
               <h4 class="card-title">
-                <a href="">Quis autem vea eum iure reprehenderit</a>
+                <a href="">Building the 2048 Game: A Fun Challenge in Web Development</a>
               </h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum nece aibus minima veniam.
+                Developing 2048 was an exciting experience that enhanced my problem-solving skills. It deepened my understanding of JavaScript and showcased my ability to combine logic and design. This project highlights my skills in creating engaging web applications.
               </p>
-              <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -492,15 +546,14 @@
             />
             <div class="card-body px-4">
               <small>By Sanjay</small
-              ><span class="ms-3">Mar 8,2022</span>
+              ><span class="ms-3">feb_2024</span>
               <h4 class="card-title">
-                <a href="">Quis autem vea eum iure reprehenderit</a>
+                <a href="">Building a Currency Converter:</a>
               </h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum nece aibus minima veniam.
+                In conclusion, the Currency Converter is a practical tool that simplifies currency conversion with real-time exchange rates. It enhances user experience with its intuitive design and accuracy. This project demonstrates my ability to create efficient and user-friendly web applications.
               </p>
-              <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Read More</a>
+              
             </div>
           </div>
         </div>
@@ -513,15 +566,14 @@
             />
             <div class="card-body px-4">
               <small>By Sanjay</small
-              ><span class="ms-3">Mar 8,2022</span>
+              ><span class="ms-3">jun_2024</span>
               <h4 class="card-title">
-                <a href="">Quis autem vea eum iure reprehenderit</a>
+                <a href="">Building an English Dictionary </a>
               </h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum nece aibus minima veniam.
+                In conclusion, the English Dictionary is a useful tool that provides accurate word meanings and definitions. It enhances user experience with its simple design and quick access to information. This project showcases my ability to create efficient and user-friendly web applications.
               </p>
-              <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal3">Read More</a>
+             
             </div>
           </div>
         </div>
@@ -753,95 +805,112 @@
         <h3>Any Questions? Feel Free to Contact</h3>
       </div>
       <div class="row justify-content-evenly mt-5">
+        <!-- Contact Details -->
         <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-geo-alt-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>121 King Street Melbourne, 3000, Australia</p>
-            </div>
-          </div>
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-telephone-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>+91 9527818693</p>
-            </div>
-          </div>
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-send-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>codewithpawan@gmail.com</p>
-            </div>
-          </div>
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-globe-americas"></i>
-            </div>
-            <div class="col-11">
-              <p>codingpawan.com</p>
-            </div>
-          </div>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-3">
+              <i class="bi bi-geo-alt-fill me-2"></i>
+              <span>Vattaparai, Sengadu, A.S.Kulam, Coimbatore-641110</span>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+              <i class="bi bi-telephone-fill me-2"></i>
+              <span>+91 9944742691</span>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="bi bi-send-fill me-2"></i>
+              <span>sanjaym292005@gmail.com</span>
+            </li>
+          </ul>
         </div>
+    
+        <!-- Contact Form -->
         <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
           <div class="contact-form">
             <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Name"
-              />
+              <label for="nameInput" class="form-label">Name</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Your Name" />
             </div>
             <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="E-mail"
-              />
+              <label for="emailInput" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Your Email" />
             </div>
             <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Mobile No."
-              />
+              <label for="mobileInput" class="form-label">Mobile No.</label>
+              <input type="text" class="form-control" id="mobileInput" placeholder="Your Mobile No." />
             </div>
             <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                placeholder="Message"
-                rows="5"
-              ></textarea>
+              <label for="messageInput" class="form-label">Message</label>
+              <textarea class="form-control" id="messageInput" placeholder="Your Message" rows="5"></textarea>
             </div>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              Submit
-            </button>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">Submit</button>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- contact section ends here -->
 
       <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
-    <button
-      type="button"
-      class="btn btn-floating btn-lg rounded-pill"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </button>
+   <!-- Back to Top Button -->
+<button
+type="button"
+class="btn btn-floating btn-lg rounded-pill"
+id="btn-back-to-top"
+>
+<i class="bi bi-arrow-up"></i>
+</button>
+
+<script>
+// Get the button element
+const backToTopButton = document.getElementById("btn-back-to-top");
+
+// Show the button when the user scrolls down 100px
+window.onscroll = function () {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+
+// Scroll smoothly to the top when the button is clicked
+backToTopButton.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+<style>
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99;
+}
+</style>
+
 
     <!-- footer section starts  -->
     <footer class="text-center text-muted py-4">
-      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+     
+      <style>
+        @keyframes colorChange {
+          0% { color: #FF5733; }  /* Red-Orange */
+          20% { color: #3498DB; } /* Blue */
+          40% { color: #2ECC71; } /* Green */
+          60% { color: #F1C40F; } /* Yellow */
+          80% { color: #9B59B6; } /* Purple */
+          100% { color: #FF5733; } /* Back to Red-Orange */
+        }
+      
+        .text-multicolor {
+          animation: colorChange 6s infinite alternate;
+        }
+      </style>
+      
+      <h3 class="text-multicolor pt-4" data-aos="fade-up">Portfolio</h3>
+      
+
       <div class="link-group mt-5" data-aos="fade-up">
         <a href="#home">Home</a>
         <div class="vr"></div>
@@ -851,24 +920,37 @@
         <div class="vr"></div>
         <a href="#portfolio">Portfolio</a>
         <div class="vr"></div>
-        <a href="#blog">Blog</a>
-        <div class="vr"></div>
         <a href="#contact">Contact</a>
       </div>
       <div class="social-links mt-5" data-aos="fade-up">
-        <button href="" class="rounded-pill dribble">
-          <i class="bi bi-dribbble"></i>
-        </button>
-        <button href="" class="rounded-pill whatsapp">
-          <i class="bi bi-whatsapp"></i>
-        </button>
-        <button href="" class="rounded-pill behance">
-          <i class="bi bi-behance"></i>
-        </button>
-      </div>
-      <hr class="text-muted my-4" />
-
-      <p>Copyright 2022 Portfolio | All Rights Reserved.</p>
+        <a href="https://www.linkedin.com/in/sanjay-m-2aa8322a4" target="_blank">
+            <button class="rounded-pill social-btn linkedin">
+                <i class="bi bi-linkedin"></i>
+            </button>
+        </a>
+        <a href="https://wa.me/your-number" target="_blank">
+            <button class="rounded-pill social-btn whatsapp">
+                <i class="bi bi-whatsapp"></i>
+            </button>
+        </a>
+        <a href="https://www.instagram.com/msanjay._" target="_blank">
+            <button class="rounded-pill social-btn instagram">
+                <i class="bi bi-instagram"></i>
+            </button>
+        </a>
+        <a href="https://x.com/sanjay1985240" target="_blank">
+            <button class="rounded-pill social-btn x-account">
+                <i class="bi bi-twitter-x"></i>
+            </button>
+        </a>
+    </div>
+    
+        </a>
+    </div>
+    <hr class="text-muted my-4" />
+    
+      
+  
     </footer>
     <!-- footer section ends here -->
 
@@ -891,5 +973,7 @@
     <!-- custom js file linking -->
     <script src="js/script.js"></script>
     
+    <script src="script.js"></script>
+
   </body>
 </html>

@@ -3,8 +3,8 @@ let htmlProgress = document.querySelector(".html-css"),
   htmlValue = document.querySelector(".html-progress");
 
 let htmlStartValue = 0,
-  htmlEndValue = 90,
-  htmlspeed = 30;
+  htmlEndValue = 70,
+  htmlspeed = 20;
 
 let progresshtml = setInterval(() => {
   htmlStartValue++;
@@ -24,8 +24,8 @@ let javascriptProgress = document.querySelector(".javascript"),
   javascriptValue = document.querySelector(".javascript-progress");
 
 let javascriptStartValue = 0,
-  javascriptEndValue = 75,
-  jsspeed = 30;
+  javascriptEndValue = 40,
+  jsspeed = 20;
 
 let progressjs = setInterval(() => {
   javascriptStartValue++;
@@ -45,8 +45,8 @@ let phpProgress = document.querySelector(".php"),
   phpValue = document.querySelector(".php-progress");
 
 let phpStartValue = 0,
-  phpEndValue = 80,
-  phpspeed = 30;
+  phpEndValue = 30,
+  phpspeed = 20;
 
 let progressphp = setInterval(() => {
   phpStartValue++;
@@ -66,8 +66,8 @@ let reactProgress = document.querySelector(".reactjs"),
   reactValue = document.querySelector(".reactjs-progress");
 
 let reactStartValue = 0,
-  reactEndValue = 30,
-  rjsspeed = 30;
+  reactEndValue = 55,
+  rjsspeed = 20;
 
 let progressreact = setInterval(() => {
   reactStartValue++;
@@ -141,4 +141,33 @@ function scrollFunction() {
 mybutton.addEventListener("click",function(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const neonText = document.querySelector(".neon-text");
+
+  function checkVisibility() {
+    const rect = neonText.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      neonText.classList.add("in-view");
+    }
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Check on page load
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.querySelector(".animated-text");
+  
+  let isLarge = false; // Track font size state
+  
+  setInterval(() => {
+    if (isLarge) {
+      textElement.style.fontSize = "18px";
+      textElement.style.lineHeight = "1.6";
+    } else {
+      textElement.style.fontSize = "22px"; // Increase font size
+      textElement.style.lineHeight = "2";  // Increase line height
+    }
+    isLarge = !isLarge;
+  }, 10000); // Change size every 10 seconds
 });
